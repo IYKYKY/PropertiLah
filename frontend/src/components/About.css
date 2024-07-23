@@ -1,0 +1,56 @@
+.page-section {
+    position: relative;
+    background: linear-gradient(135deg, #003366, #66ccff); /* Example gradient, replace with your background */
+    color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+    overflow: hidden; /* Ensure the animation stays within the section */
+  }
+  
+  .sqs-html-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .sqs-html-content p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .section-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .section-background-content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .section-background-lines {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image: repeating-linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.2) 0,
+      rgba(255, 255, 255, 0.2) 1px,
+      transparent 2px,
+      transparent 50%
+    );
+    animation: flow 20s linear infinite;
+  }
+  
+  @keyframes flow {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+  }
+  

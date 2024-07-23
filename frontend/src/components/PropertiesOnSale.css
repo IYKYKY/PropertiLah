@@ -1,0 +1,100 @@
+.properties-wrapper {
+    position: relative;
+    background: linear-gradient(135deg, #003366, #66ccff); 
+    color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+    overflow: hidden; 
+  }
+  
+  .properties-container {
+    display: grid;
+    grid-template-areas: 
+      "north north-east central"
+      "west east .";
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .region-box {
+    background-color: rgba(173, 216, 230, 0.8); 
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .region-box h2 {
+    margin-top: 0;
+  }
+  
+  .region-box ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+  }
+  
+  .region-box ul li {
+    margin: 5px 0;
+  }
+  
+  .region-box ul li a {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 1024px) {
+    .properties-container {
+      grid-template-areas: 
+        "north"
+        "north-east"
+        "central"
+        "west"
+        "east";
+    }
+    .region-box {
+      max-width: none;
+      width: 100%;
+    }
+  }
+  
+  .section-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .section-background-content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .section-background-lines {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image: repeating-linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.2) 0,
+      rgba(255, 255, 255, 0.2) 1px,
+      transparent 2px,
+      transparent 50%
+    );
+    animation: flow 20s linear infinite;
+  }
+  
+  @keyframes flow {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+  }
+  
